@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMSample", "MVVMSample\MVVMSample.csproj", "{8BDA924B-CC41-4DD1-943B-BFD70B9B675E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridSample", "GridSample\GridSample.csproj", "{FDC68253-CB26-4320-B712-3B08F27D3968}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,30 @@ Global
 		{8BDA924B-CC41-4DD1-943B-BFD70B9B675E}.Release|x86.ActiveCfg = Release|x86
 		{8BDA924B-CC41-4DD1-943B-BFD70B9B675E}.Release|x86.Build.0 = Release|x86
 		{8BDA924B-CC41-4DD1-943B-BFD70B9B675E}.Release|x86.Deploy.0 = Release|x86
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Debug|ARM.ActiveCfg = Debug|ARM
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Debug|ARM.Build.0 = Debug|ARM
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Debug|ARM.Deploy.0 = Debug|ARM
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Debug|x64.ActiveCfg = Debug|x64
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Debug|x64.Build.0 = Debug|x64
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Debug|x64.Deploy.0 = Debug|x64
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Debug|x86.ActiveCfg = Debug|x86
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Debug|x86.Build.0 = Debug|x86
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Debug|x86.Deploy.0 = Debug|x86
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Release|ARM.ActiveCfg = Release|ARM
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Release|ARM.Build.0 = Release|ARM
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Release|ARM.Deploy.0 = Release|ARM
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Release|x64.ActiveCfg = Release|x64
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Release|x64.Build.0 = Release|x64
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Release|x64.Deploy.0 = Release|x64
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Release|x86.ActiveCfg = Release|x86
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Release|x86.Build.0 = Release|x86
+		{FDC68253-CB26-4320-B712-3B08F27D3968}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
