@@ -11,6 +11,7 @@
     <StackPanel>
         <TextBox Header="First Name" PlaceholderText="Your first name..."></TextBox>
         <TextBox Header="Last Name" PlaceholderText="Your last name..."></TextBox>
+        <DatePicker Header="Date of Birth"></DatePicker>
         <TextBox Header="Address" PlaceholderText="Your home address..."></TextBox>
         <PasswordBox Header="Password" PlaceholderText="Your password..." IsPasswordRevealButtonEnabled="True"></PasswordBox>
         <ToggleSwitch Header="Auto Sync"></ToggleSwitch>
