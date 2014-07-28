@@ -18,7 +18,7 @@
             </Button.Flyout>
         </Button>
         <Border x:Name="image" Visibility="Collapsed" Background="Red">
-            <Image Source="Assets/Mushroom.png"></Image>
+            <Image Source="ms-appx:///Assets/Icons/Mushroom.png"></Image>
         </Border>
     </Grid>
 </Page>
