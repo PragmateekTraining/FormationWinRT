@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressBarsSample", "Progr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyoutSample", "FlyoutSample\FlyoutSample.csproj", "{426753F6-509E-45F9-A5C3-7256E17A86F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextBlockSample", "TextBlockSample\TextBlockSample.csproj", "{77B607EB-5E0B-4C01-896D-27E2D02DB666}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,30 @@ Global
 		{426753F6-509E-45F9-A5C3-7256E17A86F2}.Release|x86.ActiveCfg = Release|x86
 		{426753F6-509E-45F9-A5C3-7256E17A86F2}.Release|x86.Build.0 = Release|x86
 		{426753F6-509E-45F9-A5C3-7256E17A86F2}.Release|x86.Deploy.0 = Release|x86
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Debug|ARM.ActiveCfg = Debug|ARM
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Debug|ARM.Build.0 = Debug|ARM
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Debug|ARM.Deploy.0 = Debug|ARM
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Debug|x64.ActiveCfg = Debug|x64
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Debug|x64.Build.0 = Debug|x64
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Debug|x64.Deploy.0 = Debug|x64
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Debug|x86.ActiveCfg = Debug|x86
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Debug|x86.Build.0 = Debug|x86
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Debug|x86.Deploy.0 = Debug|x86
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Release|ARM.ActiveCfg = Release|ARM
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Release|ARM.Build.0 = Release|ARM
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Release|ARM.Deploy.0 = Release|ARM
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Release|x64.ActiveCfg = Release|x64
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Release|x64.Build.0 = Release|x64
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Release|x64.Deploy.0 = Release|x64
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Release|x86.ActiveCfg = Release|x86
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Release|x86.Build.0 = Release|x86
+		{77B607EB-5E0B-4C01-896D-27E2D02DB666}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
