@@ -6,9 +6,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <CollectionViewSource x:Name="fruitsGroupedByFirstLetter"
+                              IsSourceGrouped="True">            
+        </CollectionViewSource>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -41,6 +46,25 @@
                     <TextBlock Text="{Binding}" Width="75" TextWrapping="Wrap"></TextBlock>
                 </DataTemplate>
             </ListView.ItemTemplate>
+        </ListView>
+        <ListView ItemsSource="{Binding Source={StaticResource fruitsGroupedByFirstLetter}}"
+                  Grid.Column="3">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <Border>
+                                <TextBlock Text="{Binding Key}" FontWeight="Bold"></TextBlock>
+                            </Border>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListView.GroupStyle>
         </ListView>
     </Grid>
 </Page>
