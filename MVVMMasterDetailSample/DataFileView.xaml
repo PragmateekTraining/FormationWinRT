@@ -1,0 +1,33 @@
+﻿<UserControl
+    x:Class="LocalFolderSample.DataFileView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LocalFolderSample"
+    xmlns:assets="using:Assets"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <assets:NotBooleanToVisibilityConverter x:Key="notBooleanToVisibility"></assets:NotBooleanToVisibilityConverter>
+    </UserControl.Resources>
+    <Grid x:Name="root">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding Model.Name}"></TextBlock>
+        <TextBox AcceptsReturn="True"
+                 Text="{Binding Model.Content,UpdateSourceTrigger=PropertyChanged}"
+                 Visibility="{Binding Model.IsLoadingContent,Converter={StaticResource notBooleanToVisibility}}"
+                 Grid.Row="1">
+            
+        </TextBox>
+        <ProgressRing IsActive="{Binding Model.IsLoadingContent}"
+                      Width="50" Height="50"
+                      Grid.Row="1">
+
+        </ProgressRing>
+    </Grid>
+</UserControl>
