@@ -1,0 +1,38 @@
+﻿<UserControl
+    x:Class="DataBindingSample.CharactersCountView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DataBindingSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <local:SpreadConverter x:Key="spreadConverterNoMax"></local:SpreadConverter>
+        <local:SpreadConverter x:Key="spreadConverterWithMax" Max="140"></local:SpreadConverter>
+    </UserControl.Resources>
+    <StackPanel>
+        <TextBlock>Your message :</TextBlock>
+        <TextBox x:Name="input" VerticalAlignment="Center" AcceptsReturn="True" Height="100"></TextBox>
+        <TextBlock Text="{Binding ElementName=input,Path=Text.Length}" Grid.Column="1" VerticalAlignment="Center"></TextBlock>
+        <TextBlock>(<Run Text="{Binding ElementName=input,
+                                        Path=Text.Length,
+                                        Converter={StaticResource spreadConverterNoMax},
+                                        ConverterParameter=140,
+                                        FallbackValue='-'}"></Run> more to go)</TextBlock>
+        <TextBlock>(<Run Text="{Binding ElementName=input,
+                                        Path=Text.Length,
+                                        Converter={StaticResource spreadConverterNoMax},
+                                        FallbackValue='-'}"></Run> more to go)</TextBlock>
+        <TextBlock>(<Run Text="{Binding ElementName=input,
+                                        Path=Text.Length,
+                                        Converter={StaticResource spreadConverterWithMax},
+                                        FallbackValue='-'}"></Run> more to go)</TextBlock>
+        <TextBlock>(<Run Text="{Binding ElementName=input,
+                                        Path=Text.Length,
+                                        Converter={StaticResource spreadConverterWithMax},
+                                        ConverterParameter=0,
+                                        FallbackValue='-'}"></Run> more to go)</TextBlock>
+    </StackPanel>
+</UserControl>
