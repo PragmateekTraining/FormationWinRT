@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="StaticResourceSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StaticResourceSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <LinearGradientBrush x:Name="gradient">
+            <GradientStop Offset="0" Color="Red"></GradientStop>
+            <GradientStop Offset="0.5" Color="Green"></GradientStop>
+        </LinearGradientBrush>
+    </Page.Resources>
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                VerticalAlignment="Center">
+        <TextBox Background="{StaticResource gradient}"
+                 FontWeight="Bold"
+                 FontSize="30">
+        </TextBox>
+        <Button Click="Button_Click">Add Blue</Button>
+    </StackPanel>
+</Page>
