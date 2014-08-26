@@ -28,15 +28,16 @@
         <HubSection Width="500">
             <DataTemplate>
                 <ListView ItemsSource="{Binding Movies}"
-                          ItemTemplate="{StaticResource movieTemplateRectangle}">                    
+                          ItemTemplate="{StaticResource movieTemplateRectangle}"
+                          SelectionMode="Extended">                    
                 </ListView>
             </DataTemplate>
         </HubSection>
-        <!--<HubSection>
+        <HubSection>
             <DataTemplate>
-                <GridView ItemsSource="{Binding Movies}" ItemTemplate="{StaticResource movieTemplateRectangle}">
+                <GridView ItemsSource="{Binding Movies}" ItemTemplate="{StaticResource movieTemplateSquare}">
                 </GridView>
             </DataTemplate>
-        </HubSection>-->
+        </HubSection>
     </Hub>
 </Page>

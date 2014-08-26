@@ -18,14 +18,25 @@
         <DataTemplate x:Key="movieTemplateRectangle">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="64"></ColumnDefinition>
+                    <ColumnDefinition Width="128"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Image Source="{Binding PosterURI}"></Image>
                 <TextBlock Text="{Binding Title}"
                                        VerticalAlignment="Center"
                                        FontWeight="ExtraBold"
-                                       FontSize="20" Grid.Column="1"></TextBlock>
+                                       FontSize="30" Grid.Column="1"></TextBlock>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="movieTemplateSquare">
+            <Grid>
+                <Image Source="{Binding PosterURI}" Width="128"></Image>
+                <Border HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="Black" Opacity="0.70">
+                    <TextBlock Text="{Binding Title}"
+                                       VerticalAlignment="Top"
+                                       FontWeight="ExtraBold"
+                                       FontSize="20"></TextBlock>
+                </Border>
             </Grid>
         </DataTemplate>
     </Application.Resources>

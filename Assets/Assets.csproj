@@ -108,6 +108,8 @@
     <Content Include="MoviesDB\Posters\DieHard3.jpg" />
     <Content Include="MoviesDB\Posters\DieHard4.jpg" />
     <Content Include="MoviesDB\Posters\DieHard5.jpg" />
+    <Content Include="MoviesDB\Posters\TheExpendables2.jpg" />
+    <Content Include="MoviesDB\Posters\TheSixthSense.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets.cs" />

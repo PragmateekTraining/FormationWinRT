@@ -16,7 +16,9 @@ namespace DataViewsSample
                 new Movie{ Title = "Die Hard 2", PosterURI = "/Assets/MoviesDB/Posters/DieHard2.jpg" },
                 new Movie{ Title = "Die Hard 3", PosterURI = "/Assets/MoviesDB/Posters/DieHard3.jpg" },
                 new Movie{ Title = "Die Hard 4", PosterURI = "/Assets/MoviesDB/Posters/DieHard4.jpg" },
-                new Movie{ Title = "Die Hard 5", PosterURI = "/Assets/MoviesDB/Posters/DieHard5.jpg" }
+                new Movie{ Title = "Die Hard 5", PosterURI = "/Assets/MoviesDB/Posters/DieHard5.jpg" },
+                new Movie{ Title = "The Expendables 2", PosterURI = "/Assets/MoviesDB/Posters/TheExpendables2.jpg" },
+                new Movie{ Title = "The Sixth Sense", PosterURI = "/Assets/MoviesDB/Posters/TheSixthSense.jpg" }
             };
         }
     }
