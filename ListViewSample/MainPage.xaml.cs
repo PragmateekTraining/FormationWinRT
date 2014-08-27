@@ -29,7 +29,7 @@ namespace ListViewSample
             DataContext = this;
 
             fruitsGroupedByFirstLetter.Source = FruitsGroupedByFirstLetter;
-            fruitsGroupedByFirstLetterCustom.Source = Fruits.GroupBy(f => f[0]).Select(g => new { Letter = g.Key, Fruits = g });
+            fruitsGroupedByFirstLetterCustom.Source = Fruits.GroupBy(f => f[0]).Select(g => new { Letter = g.Key, Fruits = g, N = g.Count() });
         }
     }
 }

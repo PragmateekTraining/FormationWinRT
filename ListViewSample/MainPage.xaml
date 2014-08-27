@@ -83,7 +83,7 @@
                     <GroupStyle.HeaderTemplate>
                         <DataTemplate>
                             <Border>
-                                <TextBlock Text="{Binding Letter}" FontWeight="Bold"></TextBlock>
+                                <TextBlock><Run Text="{Binding Letter}" FontWeight="Bold"></Run> (<Run Text="{Binding N}"></Run>)</TextBlock>
                             </Border>
                         </DataTemplate>
                     </GroupStyle.HeaderTemplate>
