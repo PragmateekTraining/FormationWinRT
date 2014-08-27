@@ -10,9 +10,14 @@
         <CollectionViewSource x:Name="fruitsGroupedByFirstLetter"
                               IsSourceGrouped="True">            
         </CollectionViewSource>
+        <CollectionViewSource x:Name="fruitsGroupedByFirstLetterCustom"
+                              IsSourceGrouped="True"
+                              ItemsPath="Fruits">
+        </CollectionViewSource>
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -60,6 +65,25 @@
                         <DataTemplate>
                             <Border>
                                 <TextBlock Text="{Binding Key}" FontWeight="Bold"></TextBlock>
+                            </Border>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListView.GroupStyle>
+        </ListView>
+        <ListView ItemsSource="{Binding Source={StaticResource fruitsGroupedByFirstLetterCustom}}"
+                  Grid.Column="4">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <Border>
+                                <TextBlock Text="{Binding Letter}" FontWeight="Bold"></TextBlock>
                             </Border>
                         </DataTemplate>
                     </GroupStyle.HeaderTemplate>

@@ -18,7 +18,7 @@ namespace ListViewSample
         {
             get
             {
-                return Assets.Assets.Fruits.GroupBy(f => f[0]);
+                return Fruits.GroupBy(f => f[0]);
             }
         }
 
@@ -29,6 +29,7 @@ namespace ListViewSample
             DataContext = this;
 
             fruitsGroupedByFirstLetter.Source = FruitsGroupedByFirstLetter;
+            fruitsGroupedByFirstLetterCustom.Source = Fruits.GroupBy(f => f[0]).Select(g => new { Letter = g.Key, Fruits = g });
         }
     }
 }
