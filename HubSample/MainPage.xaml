@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="HubSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HubSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Hub Header="Chuck Norris" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <HubSection Width="1000">
+            <HubSection.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="{Binding PhotoURI}"></ImageBrush>
+            </HubSection.Background>
+        </HubSection>
+        <HubSection Header="Biography" Width="1000">
+            <DataTemplate>
+                <TextBlock Text="{Binding Biography}"></TextBlock>
+            </DataTemplate>
+        </HubSection>
+        <HubSection Header="Movies" Width="1000">
+            <DataTemplate>
+                <GridView ItemsSource="{Binding Movies}">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Background="Black">
+                                <Image Width="250" Height="250" Source="{Binding PosterURI}"></Image>
+                                <Border VerticalAlignment="Bottom" Opacity="0.75" Background="DarkViolet">
+                                    <TextBlock TextAlignment="Center" TextWrapping="WrapWholeWords" FontSize="25" FontWeight="Bold" Text="{Binding Title}"></TextBlock>
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </DataTemplate>
+        </HubSection>
+        <HubSection Header="Photos" Width="1000">
+            <DataTemplate>
+                <GridView ItemsSource="{Binding OtherPhotosURIs}">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Width="300" Height="300" Source="{Binding}"></Image>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </DataTemplate>
+        </HubSection>
+    </Hub>
+</Page>
