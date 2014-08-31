@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="SearchSample.MoviePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SearchSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignData Source=/Design/MissingInAction.xaml}">
+    <Hub Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Hub.Header>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Command="{Binding NavigationHelper.GoBackCommand}" 
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Center"
+                        Margin="10"></Button>
+                <TextBlock Text="{Binding Movie.Title}"
+                           Margin="10"
+                           Grid.Column="1"></TextBlock>
+            </Grid>
+        </Hub.Header>
+        <HubSection Width="1000">
+            <HubSection.Background>
+                <ImageBrush ImageSource="{Binding Movie.PosterURI}"></ImageBrush>
+            </HubSection.Background>
+        </HubSection>
+    </Hub>
+</Page>

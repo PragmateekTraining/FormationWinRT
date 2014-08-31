@@ -53,7 +53,9 @@ On July 1, 2000, Norris was presented the Golden Lifetime Achievement Award by t
         public static readonly Actor SylvesterStallone = new Actor { FirstName = "Sylvester", LastName = "Stallone", PhotoURI = "/Assets/MoviesDB/Actors/SylvesterStallone.jpg" };
         public static readonly Actor BruceWillis = new Actor { FirstName = "Bruce", LastName = "Willis", PhotoURI = "/Assets/MoviesDB/Actors/BruceWillis.jpg" };
 
-        public static readonly Movie[] AllMovies = null;
+        public static readonly Actor[] Actors = { ChuckNorris, MelGibson, SylvesterStallone, BruceWillis };
+
+        public static readonly Movie[] Movies = null;
 
         static MoviesRepository()
         {
@@ -81,7 +83,7 @@ On July 1, 2000, Norris was presented the Golden Lifetime Achievement Award by t
                 TheExpendables2
             };
 
-            AllMovies = new[]
+            Movies = new[]
             {
                 EnterTheDragon,
                 ReturnOfTheDragon,
