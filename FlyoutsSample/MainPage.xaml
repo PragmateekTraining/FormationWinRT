@@ -50,10 +50,12 @@
                                             <RowDefinition></RowDefinition>
                                             <RowDefinition></RowDefinition>
                                         </Grid.RowDefinitions>
-                                        <TextBlock HorizontalAlignment="Stretch">Add '<Run Text="{Binding Title}"></Run>'?</TextBlock>
+                                        <TextBlock HorizontalAlignment="Stretch" Margin="3">Add '<Run Text="{Binding Title}"></Run>'?</TextBlock>
                                         <Button Command="{Binding Source={StaticResource mainViewModel},Path=AddToCartCommand}"
                                                 CommandParameter="{Binding}"
-                                                Grid.Row="1" HorizontalAlignment="Stretch">Yes!</Button>
+                                                Grid.Row="1" HorizontalAlignment="Stretch"
+                                                Content="Yes!">
+                                        </Button>
                                     </Grid>
                                 </Flyout>
                             </AppBarButton.Flyout>
