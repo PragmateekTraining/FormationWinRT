@@ -41,7 +41,7 @@
                         <TextBlock Text="{Binding Title}"
                                    FontWeight="Bold" FontSize="20"
                                    VerticalAlignment="Center" Margin="10" Grid.Column="1"></TextBlock>
-                        <AppBarButton Icon="Add" Label="Add"
+                        <AppBarButton Icon="Add" IsCompact="True"
                                       VerticalAlignment="Center" Grid.Column="2">
                             <AppBarButton.Flyout>
                                 <Flyout>
@@ -83,7 +83,7 @@
                         <TextBlock FontWeight="Bold" FontSize="20"
                                    VerticalAlignment="Center" Margin="10"
                                    Grid.Column="2">(<Run Text="{Binding Quantity}"></Run>)</TextBlock>
-                        <AppBarButton Icon="Setting" Label="Actions"
+                        <AppBarButton Icon="Setting" IsCompact="True"
                                       VerticalAlignment="Center" Margin="10"
                                       Grid.Column="3">
                             <AppBarButton.Flyout>
