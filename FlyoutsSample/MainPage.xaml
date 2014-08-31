@@ -1,0 +1,105 @@
+﻿<Page
+    x:Class="FlyoutsSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlyoutsSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <local:MainViewModel x:Key="mainViewModel"></local:MainViewModel>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+        </Style>
+        <local:BinarySwitchConverter x:Key="backgroundConverter">
+            <local:BinarySwitchConverter.ValueIfTrue>
+                <SolidColorBrush Color="Gold"></SolidColorBrush>
+            </local:BinarySwitchConverter.ValueIfTrue>
+            <local:BinarySwitchConverter.ValueIfFalse>
+                <SolidColorBrush Color="Gray"></SolidColorBrush>
+            </local:BinarySwitchConverter.ValueIfFalse>
+        </local:BinarySwitchConverter>
+    </Page.Resources>
+    <!--<Page.DataContext>
+        <StaticResourceExtension ResourceKey="mainViewModel"></StaticResourceExtension>        
+    </Page.DataContext>-->
+    <Grid DataContext="{StaticResource mainViewModel}" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListView ItemsSource="{Binding AvailableMovies}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="Gray">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Height="100" Source="{Binding PosterURI}" Margin="10"></Image>
+                        <TextBlock Text="{Binding Title}"
+                                   FontWeight="Bold" FontSize="20"
+                                   VerticalAlignment="Center" Margin="10" Grid.Column="1"></TextBlock>
+                        <AppBarButton Icon="Add" Label="Add"
+                                      VerticalAlignment="Center" Grid.Column="2">
+                            <AppBarButton.Flyout>
+                                <Flyout>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition></RowDefinition>
+                                            <RowDefinition></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock HorizontalAlignment="Stretch">Add '<Run Text="{Binding Title}"></Run>'?</TextBlock>
+                                        <Button Command="{Binding Source={StaticResource mainViewModel},Path=AddToCartCommand}"
+                                                CommandParameter="{Binding}"
+                                                Grid.Row="1" HorizontalAlignment="Stretch">Yes!</Button>
+                                    </Grid>
+                                </Flyout>
+                            </AppBarButton.Flyout>
+                        </AppBarButton>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView ItemsSource="{Binding CartItems}"
+                  Grid.Column="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="{Binding IsAGift,Converter={StaticResource ResourceKey=backgroundConverter}}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Height="100" Source="{Binding Movie.PosterURI}" Margin="10"></Image>
+                        <TextBlock Text="{Binding Movie.Title}"
+                                   FontWeight="Bold" FontSize="20"
+                                   VerticalAlignment="Center" Margin="10"
+                                   Grid.Column="1"></TextBlock>
+                        <TextBlock FontWeight="Bold" FontSize="20"
+                                   VerticalAlignment="Center" Margin="10"
+                                   Grid.Column="2">(<Run Text="{Binding Quantity}"></Run>)</TextBlock>
+                        <AppBarButton Icon="Setting" Label="Actions"
+                                      VerticalAlignment="Center" Margin="10"
+                                      Grid.Column="3">
+                            <AppBarButton.Flyout>
+                                <MenuFlyout>
+                                    <MenuFlyoutItem Text="Remove All"
+                                                    Command="{Binding Source={StaticResource mainViewModel},Path=RemoveFromCartCommand}"
+                                                    CommandParameter="{Binding}"></MenuFlyoutItem>
+                                    <MenuFlyoutItem Text="Remove One"
+                                                    Command="{Binding Source={StaticResource mainViewModel},Path=RemoveOneFromCartCommand}"
+                                                    CommandParameter="{Binding}"></MenuFlyoutItem>
+                                    <MenuFlyoutSeparator></MenuFlyoutSeparator>
+                                    <ToggleMenuFlyoutItem IsChecked="{Binding IsAGift,Mode=TwoWay}" Text="Is A Gift?"></ToggleMenuFlyoutItem>
+                                </MenuFlyout>
+                            </AppBarButton.Flyout>
+                        </AppBarButton>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
