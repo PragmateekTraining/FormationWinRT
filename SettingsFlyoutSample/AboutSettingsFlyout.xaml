@@ -1,0 +1,48 @@
+﻿<SettingsFlyout
+    x:Class="SettingsFlyoutSample.AboutSettingsFlyout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SettingsFlyoutSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    IconSource="Assets/SmallLogo.png"
+    Title="About"
+    d:DesignWidth="346">
+
+    <!-- This StackPanel acts as a root panel for vertical layout of the content sections -->
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+
+        <!-- The StackPanel(s) below define individual content sections -->
+
+        <!-- Content Section 1-->
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+
+            <!-- Section 1 header -->
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="License" />
+
+            <!-- Section 1 body -->
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
+                <Run FontWeight="Bold">DWTFYWWI LICENSE</Run><LineBreak></LineBreak>
+                <Run>Version 1, January 2006</Run><LineBreak></LineBreak>
+                <Run>Copyright (C) 2006 Ævar Arnfjörð Bjarmason</Run><LineBreak></LineBreak>
+                <LineBreak></LineBreak>
+                <Run FontWeight="Bold">Preamble</Run><LineBreak></LineBreak>
+                <Run>The licenses for most software are designed to take away your
+freedom to share and change it.  By contrast, the DWTFYWWI or Do
+Whatever The Fuck You Want With It license is intended to guarantee
+your freedom to share and change the software--to make sure the
+software is free for all its users.</Run><LineBreak></LineBreak>
+                <LineBreak></LineBreak>
+                <Run FontWeight="Bold">DWTFYWWI LICENSE</Run><LineBreak></LineBreak>
+                <Run FontStyle="Italic">TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION</Run><LineBreak></LineBreak>
+                <Run>0. The author grants everyone permission to do whatever the fuck they
+want with the software, whatever the fuck that may be.</Run>
+            </TextBlock>
+
+        </StackPanel>
+
+        <!-- Define more Content Sections below as necessary -->
+
+    </StackPanel>
+</SettingsFlyout>

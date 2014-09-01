@@ -1,0 +1,36 @@
+﻿<SettingsFlyout
+    x:Class="SettingsFlyoutSample.ColorSettingsFlyout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SettingsFlyoutSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c4f="using:Coding4Fun.Toolkit.Controls"
+    mc:Ignorable="d"
+    IconSource="Assets/SmallLogo.png"
+    Title="Color"
+    d:DesignWidth="346">
+
+    <!-- This StackPanel acts as a root panel for vertical layout of the content sections -->
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" DataContext="{StaticResource settings}">
+
+        <!-- The StackPanel(s) below define individual content sections -->
+
+        <!-- Content Section 1-->
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+
+            <!-- Section 1 header -->
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Color" />
+
+            <!-- Section 1 body -->
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" Text="Set the fill color of the rectangle" TextWrapping="Wrap">
+            </TextBlock>
+
+            <c4f:ColorHexagonPicker Color="{Binding Color,Mode=TwoWay}" ColorSize="8" ColorBrightnessSteps="8"></c4f:ColorHexagonPicker>
+            
+        </StackPanel>
+
+        <!-- Define more Content Sections below as necessary -->
+
+    </StackPanel>
+</SettingsFlyout>

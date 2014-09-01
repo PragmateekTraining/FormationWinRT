@@ -1,0 +1,46 @@
+﻿<SettingsFlyout
+    x:Class="SettingsFlyoutSample.PositionSettingsFlyout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SettingsFlyoutSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    IconSource="Assets/SmallLogo.png"
+    Title="Position"
+    d:DesignWidth="346">
+    <!-- This StackPanel acts as a root panel for vertical layout of the content sections -->
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" DataContext="{StaticResource settings}">
+
+        <!-- The StackPanel(s) below define individual content sections -->
+
+        <!-- Content Section 1-->
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+
+            <!-- Section 1 header -->
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="X" />
+
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}">Set the horizontal position of the rectangle</TextBlock>
+            
+            <!-- Section 1 body -->
+            <!--<TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
+                <TextBlock.Text>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </TextBlock.Text>
+            </TextBlock>-->
+            
+            <Slider HorizontalAlignment="Stretch" Maximum="1000" Value="{Binding X,Mode=TwoWay}"></Slider>
+
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Y" />
+
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}">Set the vertical position of the rectangle</TextBlock>
+
+            <Slider HorizontalAlignment="Stretch" Maximum="1000" Value="{Binding Y,Mode=TwoWay}"></Slider>
+
+        </StackPanel>
+
+        <!-- Define more Content Sections below as necessary -->
+
+    </StackPanel>
+</SettingsFlyout>

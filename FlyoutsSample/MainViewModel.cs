@@ -1,4 +1,5 @@
-﻿using FlyoutsSample.Common;
+﻿using Common;
+using FlyoutsSample.Common;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -12,20 +13,6 @@ using System.Windows.Input;
 
 namespace FlyoutsSample
 {
-    public abstract class NotifyPropertyChangedBase : INotifyPropertyChanged
-    {
-        protected void UpdateAndNotify<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
-        {
-            if (!EqualityComparer<T>.Default.Equals(value, field))
-            {
-                field = value;
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged = delegate { };
-    }
-
     public class CartItem : NotifyPropertyChangedBase
     {
         private Movie movie;
